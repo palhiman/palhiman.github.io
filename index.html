@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/styles.min.css?h=5a859d5adce376279dadf8af3cc520d8">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="page-top">
@@ -62,30 +63,31 @@
         </div>
     </section>
     <section id="contact">
-        <div class="container bg-light">
-            <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>
-            <hr class="star-dark mb-5">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate" data-bss-recipient="71a777316e11eb3e1a3f0738513f00b2">
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" id="name" required="" placeholder="Name" minlength="3" maxlength="20"><small class="form-text text-danger help-block"></small></div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" id="email" required="" placeholder="Email Address" minlength="10" maxlength="50"><small class="form-text text-danger help-block"></small></div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number" minlength="10" maxlength="10"><small class="form-text text-danger help-block"></small></div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" id="message" required="" placeholder="Message" rows="5" minlength="5" maxlength="200"></textarea><small class="form-text text-danger help-block"></small></div>
-                        </div>
-                        <div id="success"></div>
-                        <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
-                    </form>
-                </div>
+    <div class="container">
+        <form action="https://formspree.io/f/mwkylwbg" method="post" id="my-form">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+            <div id="status"> </div>
+        </form>
+    </div>    
+            
+            
+    
     </section>
     <footer class="footer text-center">
         <div class="container">
@@ -236,6 +238,7 @@
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/smart-forms.min.js?h=0692f36eb27607e4837760bbbf813d92"></script>
