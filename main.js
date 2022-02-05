@@ -4,7 +4,7 @@ var form = document.getElementById("contactForm");
     
     async function handleSubmit(event) {
       event.preventDefault();
-      var status = document.getElementById("status");
+      var status = document.getElementById("success");
       var data = new FormData(event.target);
       fetch(event.target.action, {
         method: form.method,
